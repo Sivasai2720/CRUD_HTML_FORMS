@@ -49,3 +49,10 @@ def select_multiple_topics(request):  #by using drop down we are selecting multi
     return render(request,'select_multiple_topics.html',d)
 
 
+#This for checkbox for selecting multiple options in topic_name
+def checkbox(request):
+    QLTO=Topic.objects.all()
+    d={'topics':QLTO}
+
+
+    return render(request,'checkbox.html',d)

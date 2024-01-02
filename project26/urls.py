@@ -22,5 +22,5 @@ urlpatterns = [
     path('insert_objects_topic/',insert_objects_topic,name='insert_objects_topic'),
     path('insert_objects_webpage/',insert_objects_webpage,name='insert_objects_webpage'),
     path('select_multiple_topics/',select_multiple_topics,name='select_multiple_topics'),
-    
+    path('checkbox/',checkbox,name='checkbox'),
 ]
