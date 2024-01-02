@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dispaly_webpages</title>
+</head>
+<body>
+    <center>
+        <table border="3px">
+
+            <tr>
+                <th>Pk value</th>
+                <th>Topic_name</th>
+                <th>Name</th>
+                <th>Matches-win</th>
+                <th>Url</th>
+                <th>Email</th>
+            </tr>
+            {% for wo in webpages %}
+                <tr>
+                    <td>{{wo.id}}</td>
+                    <td>{{wo.topic_name}}</td>
+                    <td>{{wo.name}}</td>
+                    <td>{{wo.matches_win}}</td>
+                    <td>{{wo.url}}</td>
+                    <td>{{wo.email}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>

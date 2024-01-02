@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insert_objects_webpage</title>
+</head>
+<body>
+    <center>
+        <h1>retriving topics & inserting webpages details</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="tn">Topic_name: </label>
+            <select name="tn" id="tn">
+                {% for to in topics %}
+                    <option value="{{to.topic_name}}">{{to.topic_name}}</option> <!--here in value place we can take only primary key name-->
+                {% endfor %}
+            </select>
+
+<br><br>
+            <label for="na">Name </label>
+            <input type="text" name="na" id="na"><br><br>
+
+            <label for="ma">matches win </label>
+            <input type="text" name="ma" id="ma"><br><br>
+
+            <label for="ur">URL </label>
+            <input type="url" name="ur" id="ur"><br><br>
+
+
+            <label for="em">Email </label>
+            <input type="email" name="em" id="em"><br><br>
+            <input type="submit" value="Create Webpage">
+        </form>
+    </center>
+</body>
+</html>
